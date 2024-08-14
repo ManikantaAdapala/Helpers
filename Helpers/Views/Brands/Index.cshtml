@@ -1,0 +1,22 @@
+﻿@model List<Helpers.Models.Brand>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Brands</h2>
+@Html.ActionLink("Create","Create","Brands")
+<table class="table">
+    <tr>
+        <th>Brand ID</th>
+        <th>Brand Name</th>
+    </tr>
+    @foreach(var item in Model)
+     {
+        <tr>
+            <td>@Html.DisplayFor(temp=>item.BrandID)</td>
+            <td>@Html.DisplayFor(temp=>item.BrandName)</td>
+        </tr>
+     }
+</table>
+

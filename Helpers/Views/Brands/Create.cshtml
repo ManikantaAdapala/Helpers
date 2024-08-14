@@ -1,0 +1,18 @@
+﻿@model Helpers.Models.Brand
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Brands", FormMethod.Post))
+{
+    <div class="row">
+        <div class="form-group col-md-6">
+            @Html.LabelFor(temp => Model.BrandName)
+            @Html.TextBoxFor(temp => Model.BrandName, new {@class="form-control",PlaceHolder="Brand Name"})
+        </div>    
+    </div>
+    <button type="submit" class="btn bg-secondary">Submit</button>
+}

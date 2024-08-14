@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.7.1.js"></script>
+    <script src="~/Scripts/umd/popper.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-black">
+        <a class="navbar-brand" href="#">Company</a>
+        <ul class="nav-item">
+            <li class="nav-link"><a href="#">Home</a></li>
+            <li class="nav-link"><a href="@Url.Action("Index","Brands")">Brands</a></li>
+            <li class="nav-link"><a href="@Url.Action("Index","Categories")">Category</a></li>
+            <li class="nav-link"><a href="@Url.Action("Index","Products")">products</a></li>
+        </ul>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
